@@ -1,0 +1,57 @@
+{
+    "common": {
+        "name": "philips-android-tv",
+        "version": "1.0.0",
+        "news": {
+            "1.0.0": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung"
+            }
+        },
+        "title": "Philips Android TV",
+        "titleLang": {
+            "en": "Philips Android TV",
+            "de": "Philips Android TV"
+        },
+        "desc": {
+            "en": "Philips Android TV",
+            "de": "Philips Android TV"
+        },
+        "authors": [
+            "TheRavenOo"
+        ],
+        "keywords": [
+            "template"
+        ],
+        "license": "MIT",
+		"messagebox": true,
+		"subscribe": "messagebox",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "philips-android-tv.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/TheRavenOo/ioBroker.philips-android-tv/master/admin/philips-android-tv.png",
+        "readme": "https://github.com/TheRavenOo/ioBroker.philips-android-tv/blob/master/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "multimedia",
+        "compact": true,
+        "materialize": true,
+        "dependencies": [
+            {
+                "js-controller": ">=1.4.2"
+            }
+        ]
+    },
+    "native": {
+		"protocol": "",
+		"host": "",
+		"mac": "",
+		"port": "",
+		"api_version": "",
+		"device_id": "",
+		"password": ""
+    },
+    "objects": [],
+    "instanceObjects": []
+}

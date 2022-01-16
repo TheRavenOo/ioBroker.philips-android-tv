@@ -1,0 +1,920 @@
+{
+	"remote_control": {
+		"standby": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Standby"
+			}
+		},
+		
+		"mute": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Mute"
+			}
+		},
+		
+		"volume_up": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "VolumeUp"
+			}
+		},
+		
+		"volume_down": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "VolumeDown"
+			}
+		},
+		
+		"channel_up": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "ChannelStepUp"
+			}
+		},
+		
+		"channel_down": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "ChannelStepDown"
+			}
+		},
+		
+		"play": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Play"
+			}
+		},
+		
+		"pause": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Pause"
+			}
+		},
+		
+		"play_pause": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "PlayPause"
+			}
+		},
+		
+		"stop": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Stop"
+			}
+		},
+		
+		"fast_forward": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "FastForward"
+			}
+		},
+		
+		"rewind": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Rewind"
+			}
+		},
+		
+		"next": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Next"
+			}
+		},
+		
+		"previous": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Previous"
+			}
+		},
+		
+		"cursor_up": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "CursorUp"
+			}
+		},
+		
+		"cursor_down": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "CursorDown"
+			}
+		},
+		
+		"cursor_left": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "CursorLeft"
+			}
+		},
+		
+		"cursor_right": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "CursorRight"
+			}
+		},
+		
+		"confirm": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Confirm"
+			}
+		},
+		
+		"back": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Back"
+			}
+		},
+		
+		"find": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Find"
+			}
+		},
+		
+		"red": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "RedColour"
+			}
+		},
+		
+		"green": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "GreenColour"
+			}
+		},
+		
+		"yellow": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "YellowColour"
+			}
+		},
+		
+		"blue": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "BlueColour"
+			}
+		},
+		
+		"home": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Home"
+			}
+		},
+		
+		"options": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Options"
+			}
+		},
+		
+		"dot": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Dot"
+			}
+		},
+		
+		"digit_0": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Digit0"
+			}
+		},
+		
+		"digit_1": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Digit1"
+			}
+		},
+		
+		"digit_2": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Digit2"
+			}
+		},
+		
+		"digit_3": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Digit3"
+			}
+		},
+		
+		"digit_4": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Digit4"
+			}
+		},
+		
+		"digit_5": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Digit5"
+			}
+		},
+		
+		"digit_6": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Digit6"
+			}
+		},
+		
+		"digit_7": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Digit7"
+			}
+		},
+		
+		"digit_8": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Digit8"
+			}
+		},
+		
+		"digit_9": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Digit9"
+			}
+		},
+		
+		"info": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Info"
+			}
+		},
+		
+		"adjust": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Adjust"
+			}
+		},
+		
+		"watch_tv": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "WatchTV"
+			}
+		},
+		
+		"viewmode": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Viewmode"
+			}
+		},
+		
+		"teletext": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Teletext"
+			}
+		},
+		
+		"subtitle": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Subtitle"
+			}
+		},
+		
+		"source": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Source"
+			}
+		},
+		
+		"ambilight_onoff": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "AmbilightOnOff"
+			}
+		},
+		
+		"record": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Record"
+			}
+		},
+		
+		"online": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "input/key",
+			"body": {
+				"key": "Online"
+			}
+		}
+	},
+	
+	"apps": {
+		"youtube": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "activities/launch",
+			"body": { 
+				"label": "YouTube",
+				"intent": {
+					"component": {
+						"packageName": "com.google.android.youtube.tv",
+						"className": "com.google.android.apps.youtube.tv.activity.ShellActivity"
+					},
+					"action": "android.intent.action.MAIN"
+				},
+				"order": 0,
+				"id": "com.google.android.apps.youtube.tv.activity.ShellActivity-com.google.android.youtube.tv",
+				"type": "app"
+			}
+		},
+		
+		"joyn": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "activities/launch",
+			"body": { 
+				"label": "Joyn",
+				"intent": {
+					"component": {
+						"packageName": "de.prosiebensat1digital.seventv",
+						"className": "de.prosiebensat1digital.seventv.MainActivity"
+					},
+					"action": "android.intent.action.MAIN"
+				},
+				"order": 0,
+				"id": "de.prosiebensat1digital.seventv.MainActivity-de.prosiebensat1digital.seventv",
+				"type": "app"
+			}
+		},
+		
+		"prime-video": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "activities/launch",
+			"body": { 
+				"label": "Prime Video",
+				"intent": {
+					"component": {
+						"packageName": "com.amazon.amazonvideo.livingroom",
+						"className": "com.amazon.ignition.IgnitionActivity"
+					},
+					"action": "empty"
+				},
+				"order": 0,
+				"id": "com.amazon.ignition.IgnitionActivity-com.amazon.amazonvideo.livingroom",
+				"type": "app"
+			}
+		},
+		
+		"netflix": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "activities/launch",
+			"body": { 
+				"label": "Netflix",
+				"intent": {
+					"component": {
+						"packageName": "com.netflix.ninja",
+						"className": "com.netflix.ninja.MainActivity"
+					},
+					"action": "android.intent.action.MAIN"
+				},
+				"order": 0,
+				"id": "com.netflix.ninja.MainActivity-com.netflix.ninja",
+				"type": "app"
+			}
+		},
+		
+		"disney": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "activities/launch",
+			"body": { 
+				"label": "Disney+",
+				"intent": {
+					"component": {
+						"packageName": "com.disney.disneyplus",
+						"className": "com.bamtechmedia.dominguez.main.MainActivity"
+					},
+					"action": "android.intent.action.MAIN"
+				},
+				"order": 0,
+				"id": "com.bamtechmedia.dominguez.main.MainActivity-com.disney.disneyplus",
+				"type": "app"
+			}
+		},
+		
+		"spotify": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "activities/launch",
+			"body": { 
+				"label": "Spotify",
+				"intent": {
+					"component": {
+						"packageName": "com.spotify.tv.android",
+						"className": "com.spotify.tv.android.SpotifyTVActivity"
+					},
+					"action": "android.intent.action.MAIN"
+				},
+				"order": 0,
+				"id": "com.spotify.tv.android.SpotifyTVActivity-com.spotify.tv.android",
+				"type": "app"
+			}
+		}
+	},
+	
+	"inputs": {
+		"hdmi_1": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "activities/launch",
+			"body": { 
+				"intent": {
+					"extras": {
+						"query": "HDMI 1"
+					}, 
+					"action": "Intent {  act=android.intent.action.ASSIST cmp=com.google.android.katniss/com.google.android.apps.tvsearch.app.launch.trampoline.SearchActivityTrampoline flg=0x10200000 }", 
+					"component": {
+						"packageName": "com.google.android.katniss",
+						"className": "com.google.android.apps.tvsearch.app.launch.trampoline.SearchActivityTrampoline"
+					}
+				}
+			}
+		},
+		
+		"hdmi_2": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "activities/launch",
+			"body": { 
+				"intent": {
+					"extras": {
+						"query": "HDMI 2"
+					}, 
+					"action": "Intent {  act=android.intent.action.ASSIST cmp=com.google.android.katniss/com.google.android.apps.tvsearch.app.launch.trampoline.SearchActivityTrampoline flg=0x10200000 }", 
+					"component": {
+						"packageName": "com.google.android.katniss",
+						"className": "com.google.android.apps.tvsearch.app.launch.trampoline.SearchActivityTrampoline"
+					}
+				}
+			}
+		},
+		
+		"hdmi_3": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "activities/launch",
+			"body": { 
+				"intent": {
+					"extras": {
+						"query": "HDMI 3"
+					}, 
+					"action": "Intent {  act=android.intent.action.ASSIST cmp=com.google.android.katniss/com.google.android.apps.tvsearch.app.launch.trampoline.SearchActivityTrampoline flg=0x10200000 }", 
+					"component": {
+						"packageName": "com.google.android.katniss",
+						"className": "com.google.android.apps.tvsearch.app.launch.trampoline.SearchActivityTrampoline"
+					}
+				}
+			}
+		},
+		
+		"hdmi_4": {
+			"attributes": {
+				"readable": false,
+				"writeable": true,
+				"type": "button"
+			},
+			
+			"path": "activities/launch",
+			"body": { 
+				"intent": {
+					"extras": {
+						"query": "HDMI 4"
+					}, 
+					"action": "Intent {  act=android.intent.action.ASSIST cmp=com.google.android.katniss/com.google.android.apps.tvsearch.app.launch.trampoline.SearchActivityTrampoline flg=0x10200000 }", 
+					"component": {
+						"packageName": "com.google.android.katniss",
+						"className": "com.google.android.apps.tvsearch.app.launch.trampoline.SearchActivityTrampoline"
+					}
+				}
+			}
+		}	
+	},
+
+	"general": {
+		"powerstate": {
+			"attributes": {
+				"readable": true,
+				"writeable": true,
+				"type": "boolean"
+			},
+			
+			"path": "powerstate",
+			"body": [
+				{
+					"powerstate": "Standby"
+				},
+				{
+					"powerstate": "On"
+				}]
+		},
+		
+		"volume": {
+			"attributes": {
+				"readable": true,
+				"writeable": true,
+				"type": "number"
+			},
+			
+			"path": "audio/volume",
+			"body": {
+				"muted": false, 
+				"current": 0
+			}
+		},
+		
+		"current_channel": {
+			"attributes": {
+				"readable": true,
+				"writeable": false,
+				"type": "string"
+			},
+			
+			"path": "activities/tv"
+		},
+		
+		"current_app": {
+			"attributes": {
+				"readable": true,
+				"writeable": false,
+				"type": "string"
+			},
+			
+			"path": "activities/current"
+		},
+		
+		"list_applications": {
+			"attributes": {
+				"readable": true,
+				"writeable": false,
+				"type": "string"
+			},
+			
+			"path": "applications"
+		}
+	}
+}

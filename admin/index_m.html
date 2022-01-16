@@ -1,0 +1,211 @@
+<html>
+
+<head>
+
+    <!-- Load ioBroker scripts and styles-->
+    <link rel="stylesheet" type="text/css" href="../../css/adapter.css" />
+    <link rel="stylesheet" type="text/css" href="../../lib/css/materialize.css">
+
+    <script type="text/javascript" src="../../lib/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../socket.io/socket.io.js"></script>
+
+    <script type="text/javascript" src="../../js/translate.js"></script>
+    <script type="text/javascript" src="../../lib/js/materialize.js"></script>
+    <script type="text/javascript" src="../../js/adapter-settings.js"></script>
+
+    <!-- Load our own files -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="words.js"></script>
+
+    <script type="text/javascript">
+        var theOnChange;
+        function handleResponse(response) {
+            switch (response.state) {
+                case "idle":
+                    $("#deviceInfo").text("Press 'Start pairing process'");
+                    $("#buttonStartPairingProcess").prop("disabled", false);
+                    break;
+					
+				case "pairingProcessStarted":
+                    $("#deviceInfo").text("Pairing process started");
+                    return true;
+					
+				case "pairingProcessWaitingForOnscreenPasscode":
+					$("#deviceInfo").text("Enter Onscreen passcode and press 'Finish pairing process'. Timeout: " + response.timeout);
+					$("#buttonStartPairingProcess").text("Finish pairing process");
+					$("#onscreen_passcode").prop("disabled", false);
+					$("#buttonStartPairingProcess").prop("disabled", false);
+					return true;
+					
+                case "errorOccured":
+					$("#onscreen_passcode").prop("disabled", true);
+                    $("#deviceInfo").text("Error occured during pairing process!");
+                    $("#buttonStartPairingProcess").prop("disabled", false);
+					$("#device_id").val("");
+                    $("#password").val("");
+					$("#onscreen_passcode").val("");
+                    theOnChange();
+                    M.updateTextFields();
+                    break;
+					
+                case "pairingSuccessful":
+                    $("#device_id").val(response.device_id);
+                    $("#password").val(response.password);
+                    $("#port").val(response.port);
+					$("#api_version").val(response.api_version);
+					$("#protocol").val(response.protocol);
+                    $("#deviceInfo").text("Pairing successful, please save settings!");
+					$("#buttonStartPairingProcess").text("Pairing successful");
+					$("#onscreen_passcode").prop("disabled", true);
+                    theOnChange();
+                    M.updateTextFields();
+                    break;
+            }
+            return false;
+        }
+		
+        function startPairingProcess() {
+			$("#buttonStartPairingProcess").prop("disabled", true);
+			$("#onscreen_passcode").prop("disabled", false);
+				
+			if ($("#buttonStartPairingProcess").text() == "Finish pairing process") {
+				sendTo(null, "finishPairingProcess", $("#onscreen_passcode").val(), function (response) {
+					if (handleResponse(response))
+						updatePairingProcessState();
+				});
+			} else {
+				$("#buttonStartPairingProcess").prop("disabled", true);
+				$("#onscreen_passcode").prop("disabled", false);
+				$("#device_id").val("");
+				$("#password").val("");
+				theOnChange();
+				M.updateTextFields();
+				
+				sendTo(null, "startPairingProcess", null, function (response) {
+					if (handleResponse(response))
+						updatePairingProcessState();
+				});
+			}
+        }
+
+        async function updatePairingProcessState() {
+            sendTo(null, "pairingProcessState", null, function (response) {
+                if (handleResponse(response)) {
+					updatePairingProcessState();
+				}
+            });
+        }
+
+        setTimeout(() => updatePairingProcessState(), 100);
+    </script>
+
+    <script type="text/javascript">
+        // This will be called by the admin adapter when the settings page loads
+        function load(settings, onChange) {
+            // example: select elements with id=key and class=value and insert value
+            if (!settings) return;
+            $(".value").each(function () {
+                var $key = $(this);
+                var id = $key.attr("id");
+                if ($key.attr("type") === "checkbox") {
+                    // do not call onChange direct, because onChange could expect some arguments
+                    $key.prop("checked", settings[id])
+                        .on("change", () => onChange())
+                        ;
+                } else {
+                    // do not call onChange direct, because onChange could expect some arguments
+                    $key.val(settings[id])
+                        .on("change", () => onChange())
+                        .on("keyup", () => onChange())
+                        ;
+                }
+            });
+            onChange(false);
+			theOnChange = onChange;
+            // reinitialize all the Materialize labels on the page if you are dynamically adding inputs:
+            if (M) M.updateTextFields();
+        }
+
+        // This will be called by the admin adapter when the user presses the save button
+        function save(callback) {
+            // example: select elements with class=value and build settings object
+            var obj = {};
+            $(".value").each(function () {
+                var $this = $(this);
+                if ($this.attr("type") === "checkbox") {
+                    obj[$this.attr("id")] = $this.prop("checked");
+                } else {
+                    obj[$this.attr("id")] = $this.val();
+                }
+            });
+            callback(obj);
+        }
+    </script>
+
+</head>
+<body>
+    <div class="m adapter-container">
+        <div class="row">
+            <div class="col s4 m4 l2">
+                <img src="philips-android-tv.png" class="logo">
+            </div>
+        </div>
+		
+        <div class="row">
+            <div class="col s4 input-field">
+                <input type="text" class="value" id="host" />
+                <label for="host" class="translate">Hostname/IP</label>
+            </div>
+            <div class="col s4 input-field">
+                <input type="text" class="value" id="mac" />
+                <label for="mac" class="translate">MAC-Adresse</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s2 input-field">
+                <input disabled type="text" class="value" id="onscreen_passcode" />
+                <label for="onscreen_passcode" class="translate">Onscreen password</label>
+            </div>
+        </div>
+		
+        <div class="row">
+			<div class="col s12 m6 l4">
+				<button disabled id="buttonStartPairingProcess" class="waves-effect waves-light btn" style="margin-top: 20px;"
+					onclick="startPairingProcess()"><span class="translate">Start pairing process</span></button>
+			</div>
+        </div>
+
+        <div class="row">
+			<div id="deviceInfo" class="col s12 m6 l4" style="background: lightgrey; height: 60px; color:black; display: flex; justify-content: center; align-items: center;" class="translate">
+				Please start adapter so pairing process could be started
+			</div>
+        </div>
+		
+        <div class="row">
+            <div class="col s4 input-field">
+                <input disabled type="text" class="value" id="device_id" />
+                <label for="device_id" class="translate">Device ID</label>
+            </div>
+            <div class="col s8 input-field">
+                <input disabled type="text" class="value" id="password" />
+                <label for="password" class="translate">Password</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s2 input-field">
+                <input disabled type="text" class="value" id="port" />
+                <label for="port" class="translate">Port</label>
+            </div>
+            <div class="col s2 input-field">
+                <input disabled type="text" class="value" id="api_version" />
+                <label for="api_version" class="translate">API Version</label>
+            </div>
+            <div class="col s2 input-field">
+                <input disabled type="text" class="value" id="protocol" />
+                <label for="protocol" class="translate">Protokoll</label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
