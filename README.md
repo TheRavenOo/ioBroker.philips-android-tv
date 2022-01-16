@@ -89,8 +89,8 @@ For later updates, the above procedure is not necessary. Just do the following:
 
 ## Changelog
 
-### 0.0.1
-* (TheRavenOo) initial release
+### 1.0.0
+* initial release
 
 ## License
 MIT License
